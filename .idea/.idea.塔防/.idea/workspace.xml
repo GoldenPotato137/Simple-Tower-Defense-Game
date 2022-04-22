@@ -5,25 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/WayPointManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Bow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Bow.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Enemy 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Enemy1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandit.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Count.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Count.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Initial.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemySpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TestManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TestManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/WayPointManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoints.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/TurretData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/TurretData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650555985046</updated>
-      <workItem from="1650555988986" duration="4905000" />
+      <workItem from="1650555988986" duration="19100000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -104,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650557221744</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="进一步调整结构">
+      <created>1650587867924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650587867924</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +138,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="初始提交" />
     <MESSAGE value="调整结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整结构" />
+    <MESSAGE value="进一步调整结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="进一步调整结构" />
   </component>
 </project>

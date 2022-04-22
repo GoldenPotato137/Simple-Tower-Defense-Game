@@ -1,81 +1,70 @@
-﻿// using UnityEngine;
-// using System.Collections;
-// using System.Collections.Generic;
-//
-// public class Turret : MonoBehaviour {
-//
-// 	public List<GameObject> enemys = new List<GameObject>();
-// 	void OnTriggerEnter(Collider col)
-//     {
-//         if (col.tag =="Enemy")
-//         {
-//             enemys.Add(col.gameObject);
-//         }
-//         
-//     }
-//     void OnTriggerExit(Collider col)
-//     {
-//         if (col.tag =="Enemy")
-//         {
-//             enemys.Remove (col.gameObject);
-//         }
-//     }
-//
-//     public float  attackRateTime = 1;//多少秒攻击一次
-//     public  float timer = 0;
-//     public GameObject bulletPrefab;//子弹
-//     public Transform firePosition;
-//     public Transform head;
-//     void Start()
-//     {
-//         timer = attackRateTime;
-//     }
-//     void  Update()
-//     {
-//         if (enemys.Count > 0 && enemys[0] != null)
-//         {
-//             Vector3 targetposition = enemys[0].transform.position;
-//             targetposition.y = head.position.y;
-//             head.LookAt(targetposition);
-//         }
-//         timer += Time.deltaTime;
-//         if (enemys.Count>0&&timer >=attackRateTime )
-//         {
-//             timer = 0;
-//             Attack();
-//         }
-//        
-//     }
-//     void Attack()
-//     {
-//         if (enemys [0]==null)
-//         {
-//             UpdateEnemys();
-//         }
-//         if (enemys .Count >0)
-//         {
-//             GameObject bullet = GameObject.Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
-//             bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
-//         }
-//       else
-//         {
-//             timer = attackRateTime;
-//         }
-//     }
-//     void UpdateEnemys()
-//     {
-//         // enemys.RemoveAll(null);
-//         List<int> emptyIndex = new List<int>();
-//        for (int index =0; index <enemys .Count;index ++)
-//         {
-//             if (enemys [index]==null)
-//             {
-//                 emptyIndex.Add(index);
-//             }
-//         }
-//         for (int i = 0; i < emptyIndex.Count ; i++)
-//         {
-//             enemys.RemoveAt(emptyIndex[i]-i);
-//         }
-//     }
-// }
+﻿using System.Collections.Generic;
+using Manager;
+using UnityEngine;
+
+namespace Turret
+{
+    public abstract class Turret : MonoBehaviour 
+    {
+        private List<GameObject> enemies;
+        [SerializeField] private bool faceEnemy;
+        [SerializeField] private float attackRateTime = 1;//多少秒攻击一次
+        [SerializeField] protected float fireRange; //射程
+        private float timer = 0;
+        public GameObject bulletPrefab;//子弹
+        public Transform firePosition;
+        // public Transform head;
+        
+        protected abstract bool Attack();
+        
+        void Start()
+        {
+            timer = attackRateTime;
+        }
+
+        protected GameObject GetNearestEnemy()
+        {
+            enemies ??= EnemyManager.enemies;
+            if (enemies == null || enemies.Count == 0) return null;
+            GameObject ans = enemies[0];
+            foreach (var enemy in enemies)
+                if ((enemy.transform.position - ans.transform.position).magnitude < (transform.position - ans.transform.position).magnitude)
+                    ans = enemy;
+            return ans;
+        }
+        
+        void  Update()
+        {
+            if (faceEnemy && GetNearestEnemy()!=null)
+            {
+                var target = GetNearestEnemy();
+                var position = transform.position;
+                transform.Rotate(0,0,Vector2.SignedAngle(firePosition.position - position,
+                    target.transform.position - position));
+            }
+            timer += Time.deltaTime;
+            if (enemies.Count>0 && timer >=attackRateTime)
+            {
+                if(Attack())
+                    timer = 0;
+            }
+        }
+        
+        // void OnTriggerEnter(Collider col)
+        // {
+        //     if (col.tag =="Enemy")
+        //     {
+        //         enemys.Add(col.gameObject);
+        //     }
+        //
+        // }
+        // void OnTriggerExit(Collider col)
+        // {
+        //     if (col.tag =="Enemy")
+        //     {
+        //         enemys.Remove (col.gameObject);
+        //     }
+        // }
+        //
+    }
+}

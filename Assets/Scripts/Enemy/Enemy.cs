@@ -11,8 +11,9 @@ namespace Enemy
 		/// 敌人移动速度
 		public float speed = 1;
 		/// 当前所到waypoint的下标
-		private int index = 0; 
-	
+		private int index = 0;
+		public EnemyManager manager;
+			
 		void Start()
 		{
 			wayPoints = WayPointManager.positions;
@@ -41,12 +42,13 @@ namespace Enemy
 		void ReachDestination()
 		{
 			DestroyOperate();
+			manager.RemoveEnemy(gameObject);
 			GameObject.Destroy(this.gameObject);
 		}
 	
 		void OnDestroy()
 		{
-			EnemyManager.countEnemyAlive--;
+			;
 		}
 	}
 }

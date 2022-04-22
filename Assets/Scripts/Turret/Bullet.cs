@@ -1,38 +1,40 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
-public class Bullet : MonoBehaviour {
-    public int damage = 50;
-    public float speed = 30;
-    public GameObject explosionEffectPrefab;
-    private float distanceArriveTarget = 1.3f;
-    private Transform target;
-    public void SetTarget(Transform _target)
+namespace Turret
+{
+    public class Bullet : MonoBehaviour 
     {
-        this.target = _target;
-    }
-    void Update()
-    {
-        if (target ==null )
+        public int damage = 50;
+        public float speed = 30;
+        public GameObject explosionEffectPrefab;
+        private float distanceArriveTarget = 1.3f;
+        private Transform target;
+        public void SetTarget(Transform _target)
         {
-            Die();
-            return;
+            this.target = _target;
         }
-        transform.LookAt(target.position);
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        Vector3 dir = target.position - transform.position;
-        if(dir.magnitude< distanceArriveTarget)
+        void Update()
         {
-            // target .GetComponent<Enemy.Enemy>().TakeDamage(damage);
-            Die();
-        }
+            if (target ==null )
+            {
+                Die();
+                return;
+            }
+            transform.LookAt(target.position);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            Vector3 dir = target.position - transform.position;
+            if(dir.magnitude< distanceArriveTarget)
+            {
+                // target .GetComponent<Enemy.Enemy>().TakeDamage(damage);
+                Die();
+            }
 
-    }
-    void Die()
-    {
-        GameObject effect = GameObject.Instantiate(explosionEffectPrefab, transform.position, transform.rotation);
-        Destroy(effect, 1);
-        Destroy(this.gameObject);
+        }
+        void Die()
+        {
+            GameObject effect = GameObject.Instantiate(explosionEffectPrefab, transform.position, transform.rotation);
+            Destroy(effect, 1);
+            Destroy(this.gameObject);
+        }
     }
 }
