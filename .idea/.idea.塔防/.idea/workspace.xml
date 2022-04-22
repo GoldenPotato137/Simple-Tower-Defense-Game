@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthBar.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthBar.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Initial/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Initial/Enemy 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +75,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650555985046</updated>
-      <workItem from="1650555988986" duration="25017000" />
+      <workItem from="1650555988986" duration="26921000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -109,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650624030494</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改buildmanager结构">
+      <created>1650625482162</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1650625482162</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +160,7 @@
     <MESSAGE value="新增Turret基类，Bow" />
     <MESSAGE value="完成炮塔逻辑，新增Ax炮塔脚本" />
     <MESSAGE value="完成炮塔逻辑，新增Ax脚本" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成炮塔逻辑，新增Ax脚本" />
+    <MESSAGE value="修改buildmanager结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改buildmanager结构" />
   </component>
 </project>

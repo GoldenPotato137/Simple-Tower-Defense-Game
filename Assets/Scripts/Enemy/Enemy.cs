@@ -1,4 +1,5 @@
 ﻿using Manager;
+using UI;
 using UnityEngine;
 
 namespace Enemy
@@ -9,10 +10,12 @@ namespace Enemy
 		private int index; //当前所到waypoint的下标
 		public float speed = 1; //敌人移动速度
 		public int hp;//怪物血量
+		public HealthBar healthBar;
 		public EnemyManager manager;
 			
 		void Start()
 		{
+			healthBar.SetMaxHealth(hp);
 			wayPoints = WayPointManager.positions;
 		}
 	
@@ -45,6 +48,7 @@ namespace Enemy
 		internal void Damaged(int damage)
 		{
 			hp -= damage;
+			healthBar.SetHealth(hp);
 			DamagedOperate(damage);
 			if (hp <= 0)
 				Killed();
