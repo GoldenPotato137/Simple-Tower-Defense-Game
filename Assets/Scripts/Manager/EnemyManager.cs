@@ -7,7 +7,7 @@ namespace Manager
 {
 	public class EnemyManager : MonoBehaviour 
 	{
-		public static int countEnemyAlive;
+		private static int _countEnemyAlive;
 		public Wave[] waves;
 		[FormerlySerializedAs("START")] public Transform start;
 		public float waveRate =3;
@@ -28,7 +28,7 @@ namespace Manager
 		public void RemoveEnemy(GameObject enemy)
 		{
 			enemies.Remove(enemy);
-			countEnemyAlive--;
+			_countEnemyAlive--;
 		}
 		
 		IEnumerator SpawnEnemy()
@@ -42,18 +42,18 @@ namespace Manager
 					var component = temp.GetComponent<Enemy.Enemy>();
 					component.manager = this;
 					enemies.Add(temp);
-					countEnemyAlive++;
+					_countEnemyAlive++;
 					if(i!=wave.count-1)
 						yield return new WaitForSeconds(wave.rate);
 				}
-				while (countEnemyAlive > 0)
+				while (_countEnemyAlive > 0)
 				{
 					yield return 0;
 				}
 				yield return new WaitForSeconds(waveRate);
 			}
 			
-			while (countEnemyAlive>0)
+			while (_countEnemyAlive>0)
 			{
 				yield return 0;
 			}

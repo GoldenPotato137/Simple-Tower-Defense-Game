@@ -7,32 +7,35 @@ namespace Turret
         public int damage = 50;
         public float speed = 30;
         public GameObject explosionEffectPrefab;
-        private float distanceArriveTarget = 1.3f;
+        private float distanceArriveTarget = 0.05f;
         private Transform target;
-        public void SetTarget(Transform _target)
+        
+        public void SetTarget(Transform newTarget)
         {
-            this.target = _target;
+            target = newTarget;
         }
+        
         void Update()
         {
-            if (target ==null )
+            if (target ==null ) //目标已死亡，子弹自爆
             {
                 Die();
                 return;
             }
             transform.LookAt(target.position);
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            Vector3 dir = target.position - transform.position;
-            if(dir.magnitude< distanceArriveTarget)
+            Transform transform1;
+            (transform1 = transform).Translate(Vector3.forward * (speed * Time.deltaTime));
+            if((target.position - transform1.position).magnitude< distanceArriveTarget)
             {
-                // target .GetComponent<Enemy.Enemy>().TakeDamage(damage);
+                target.GetComponent<Enemy.Enemy>().Damaged(damage);
                 Die();
             }
-
         }
+        
         void Die()
         {
-            GameObject effect = GameObject.Instantiate(explosionEffectPrefab, transform.position, transform.rotation);
+            var transform1 = transform;
+            GameObject effect = GameObject.Instantiate(explosionEffectPrefab, transform1.position, transform1.rotation);
             Destroy(effect, 1);
             Destroy(this.gameObject);
         }

@@ -2,9 +2,19 @@
 {
     public class Bandage : Enemy
     {
-        protected override void DestroyOperate()
+        protected override void ReachTargetOperate()
         {
             
+        }
+
+        protected override void KilledOperate()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected override void DamagedOperate(int damage)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

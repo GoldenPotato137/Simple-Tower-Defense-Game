@@ -6,10 +6,11 @@ namespace Turret
 {
     public abstract class Turret : MonoBehaviour 
     {
-        private List<GameObject> enemies;
+        protected List<GameObject> enemies;
         [SerializeField] private bool faceEnemy;
         [SerializeField] private float attackRateTime = 1;//多少秒攻击一次
         [SerializeField] protected float fireRange; //射程
+        [SerializeField] protected int damage;//伤害
         private float timer = 0;
         public GameObject bulletPrefab;//子弹
         public Transform firePosition;
@@ -28,7 +29,7 @@ namespace Turret
             if (enemies == null || enemies.Count == 0) return null;
             GameObject ans = enemies[0];
             foreach (var enemy in enemies)
-                if ((enemy.transform.position - ans.transform.position).magnitude < (transform.position - ans.transform.position).magnitude)
+                if ((enemy.transform.position - transform.position).magnitude < (transform.position - ans.transform.position).magnitude)
                     ans = enemy;
             return ans;
         }

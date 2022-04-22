@@ -1,4 +1,6 @@
-﻿namespace Turret
+﻿using UnityEngine;
+
+namespace Turret
 {
     public class Bow : Turret
     {
@@ -7,22 +9,12 @@
             var target = GetNearestEnemy();
             if (target != null && (target.transform.position - transform.position).magnitude < fireRange)
             {
-                
+                GameObject bullet = GameObject.Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
+                bullet.transform.parent = this.transform;
+                bullet.GetComponent<Bullet>().SetTarget(target.transform);
+                bullet.GetComponent<Bullet>().damage = this.damage;
                 return true;
             }
-            // if (enemys [0]==null)
-            //     {
-            //         UpdateEnemies();
-            //     }
-            //     if (enemys .Count >0)
-            //     {
-            //         GameObject bullet = GameObject.Instantiate(bulletPrefab, firePosition.position, firePosition.rotation);
-            //         bullet.GetComponent<Bullet>().SetTarget(enemys[0].transform);
-            //     }
-            //     else
-            //     {
-            //         timer = attackRateTime;
-            //     }
             return false;
         }
     }

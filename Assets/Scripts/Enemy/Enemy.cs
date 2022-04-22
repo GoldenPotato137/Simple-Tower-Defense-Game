@@ -1,17 +1,14 @@
 ﻿using Manager;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Enemy
 {
 	public abstract class Enemy : MonoBehaviour 
 	{
-		/// waypoint数组
-		private Transform[] wayPoints;
-		/// 敌人移动速度
-		public float speed = 1;
-		/// 当前所到waypoint的下标
-		private int index = 0;
+		private Transform[] wayPoints; //waypoint数组
+		private int index; //当前所到waypoint的下标
+		public float speed = 1; //敌人移动速度
+		public int hp;//怪物血量
 		public EnemyManager manager;
 			
 		void Start()
@@ -37,18 +34,36 @@ namespace Enemy
 				ReachDestination();
 			}
 		}
-	
-		protected abstract void DestroyOperate();
-		void ReachDestination()
+
+		void Killed()
 		{
-			DestroyOperate();
+			KilledOperate();
 			manager.RemoveEnemy(gameObject);
 			GameObject.Destroy(this.gameObject);
 		}
-	
-		void OnDestroy()
+		
+		internal void Damaged(int damage)
 		{
-			;
+			hp -= damage;
+			DamagedOperate(damage);
+			if (hp <= 0)
+				Killed();
+		}
+	
+		/// 到达目的地时执行操作
+		protected abstract void ReachTargetOperate();
+
+		/// 被击杀时执行操作
+		protected abstract void KilledOperate();
+
+		/// 收到伤害时执行操作
+		protected abstract void DamagedOperate(int damage);
+		
+		void ReachDestination()
+		{
+			ReachTargetOperate();
+			manager.RemoveEnemy(gameObject);
+			GameObject.Destroy(this.gameObject);
 		}
 	}
 }
