@@ -36,6 +36,7 @@ namespace Turret
         {
             var transform1 = transform;
             GameObject effect = GameObject.Instantiate(explosionEffectPrefab, transform1.position, transform1.rotation);
+            effect.transform.parent = this.transform;
             Destroy(effect, 1);
             Destroy(this.gameObject);
         }
