@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +10,7 @@ public class GameManager : MonoBehaviour {
 	public GameObject endUI;
 	public Text endMessage;
 	public static GameManager Instance;
-	private EnemySpawner enemySpawner;
+	private EnemyManager enemyManager;
 	void Awake()
     {
   //       Instance = this;

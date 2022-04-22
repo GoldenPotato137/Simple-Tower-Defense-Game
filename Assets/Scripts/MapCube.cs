@@ -9,17 +9,19 @@ public class MapCube : MonoBehaviour {
     public  bool isUpgraded = false;
     [HideInInspector]
     public GameObject buildEffect;
-    private Renderer renderer;
+    private Renderer renderer1;
 
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        renderer1 = GetComponent<Renderer>();
     }
     public void BuildTurret(GameObject turretPrefab)
     {
         isUpgraded = false;
-        turretGo = GameObject.Instantiate(turretPrefab, transform.position, Quaternion.identity);
-        GameObject effect = (GameObject)Instantiate(buildEffect, transform.position,Quaternion.identity);
+        var position = transform.position;
+        turretGo = GameObject.Instantiate(turretPrefab, position, Quaternion.identity);
+        turretGo.transform.parent = transform;
+        GameObject effect = (GameObject)Instantiate(buildEffect, position,Quaternion.identity);
         Destroy(effect, 1);
 
     }
@@ -27,15 +29,15 @@ public class MapCube : MonoBehaviour {
 
     void OnMouseEnter()
     {
-        Debug.Log("OnMouseEnter");
-        if (turretGo ==null&& EventSystem.current.IsPointerOverGameObject()==false)
-        {
-            renderer.material.color = Color.red;
-
-        }
+        // Debug.Log("OnMouseEnter");
+        // if (turretGo ==null && EventSystem.current.IsPointerOverGameObject()==false)
+        // {
+        //     renderer1.material.color = Color.red;
+        //     Debug.Log("Change to red!!!");
+        // }
     }
     void OnMouseExit()
     {
-        renderer.material.color = Color.white;
+        renderer1.material.color = Color.white;
     }
 }

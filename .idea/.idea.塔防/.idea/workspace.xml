@@ -5,84 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Plane (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plane (1).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Plane (1).prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plane (1).prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Plane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plane.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Plane.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Plane.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Bullet.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Bullet/Bullet.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Bullet/Bullet.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Bullet/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Bullet/Bullet.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Effects.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Effects/BuildEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/BuildEffect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Effects/BuildEffect.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/BuildEffect.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 2.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 2/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Enemy 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 2/Enemy 2.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Enemy 2.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 2/Initial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Initial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 2/Initial.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Initial.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 3/Bandit.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Bandit.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 3/Bandit.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Bandit.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 3/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 3/Enemy 3.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 4.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 4/Bandage.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Bandage.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 4/Bandage.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Bandage.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 4/Enemy 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy 4/Enemy 4.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy1.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy1/Count.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Count.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy1/Count.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Count.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy1/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Enemy1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Enemey1/Enemy1/Enemy1.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Enemy1.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_one.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_one.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_one.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_three.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_three.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_three.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_two.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_two.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Ax/Ax_two.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_one.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_one.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_one.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_three.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_three.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_three.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_two.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_two.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/Bow/Bow_two.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_one.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_one.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_one.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_three.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_three.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_three.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_two.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_two.mat.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.mat.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/Prefab/Icons/LeafGrass/LeafGrass_two.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/RoadCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RoadCube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/map/RoadCube.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RoadCube.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Enemy 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 2/Enemy 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy1/Enemy1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandit.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Bandit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Count.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Count.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Initial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemySpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemySpawner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TestManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/TestManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoints.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/WayPointManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Waypoints.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650555985046</updated>
-      <workItem from="1650555988986" duration="1062000" />
+      <workItem from="1650555988986" duration="4905000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -156,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650556736698</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="调整结构">
+      <created>1650557221744</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650557221744</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,8 +125,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="初始提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始提交" />
+    <MESSAGE value="调整结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整结构" />
   </component>
 </project>

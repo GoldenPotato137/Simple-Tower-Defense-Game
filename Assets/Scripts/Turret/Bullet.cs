@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour {
         Vector3 dir = target.position - transform.position;
         if(dir.magnitude< distanceArriveTarget)
         {
-            target .GetComponent<Enemy>().TakeDamage(damage);
+            // target .GetComponent<Enemy.Enemy>().TakeDamage(damage);
             Die();
         }
 
