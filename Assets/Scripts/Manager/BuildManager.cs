@@ -14,7 +14,7 @@ namespace Manager
 		[FormerlySerializedAs("LeafData")] public TurretData leafData;
 
 		//表示当前选择的炮塔（要建造的炮塔）
-		private TurretData selectedTurretData;
+		public static TurretData selectedTurretData;
 		//表示当前选择的炮塔（场景中的游戏物体）
 		private GameObject selectedTurretGo;
 		public Text moneyText;
@@ -58,7 +58,6 @@ namespace Manager
 							{
 								ChangeMoney(-selectedTurretData.cost);
 								mapCube.BuildTurret(selectedTurretData.turretPrefab);
-
 							}
 							else 
 								moneyAnimator.SetTrigger(Flicker);

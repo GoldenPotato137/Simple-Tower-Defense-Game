@@ -16,7 +16,7 @@ namespace Enemy
 
         protected override void DamagedOperate(int damaged)
         {
-            Debug.Log("HP:"+hp);
+            // Debug.Log("HP:"+hp);
             // throw new System.NotImplementedException();
         }
     }

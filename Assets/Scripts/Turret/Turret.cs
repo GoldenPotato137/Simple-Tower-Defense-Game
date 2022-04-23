@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Manager;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Turret
 {
@@ -12,6 +13,7 @@ namespace Turret
         [SerializeField] protected float fireRange; //射程
         [SerializeField] protected int damage;//伤害
         private float timer = 0;
+        public bool isOn = true; //炮塔是否启用
         public GameObject bulletPrefab;//子弹
         public Transform firePosition;
         // public Transform head;
@@ -36,6 +38,7 @@ namespace Turret
         
         void  Update()
         {
+            if (isOn == false) return;
             if (faceEnemy && GetNearestEnemy()!=null)
             {
                 var target = GetNearestEnemy();

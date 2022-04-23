@@ -1,11 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Manager;
+using Turret;
 using UnityEngine.EventSystems;
 
-public class MapCube : MonoBehaviour {
+public class MapCube : MonoBehaviour 
+{
     [HideInInspector]
     public GameObject turretGo;//保存当前cube身上的炮塔
+    public GameObject tempTurret; //用于预览的临时炮塔
     public  bool isUpgraded = false;
     [HideInInspector]
     public GameObject buildEffect;
@@ -15,29 +19,46 @@ public class MapCube : MonoBehaviour {
     {
         renderer1 = GetComponent<Renderer>();
     }
+    
     public void BuildTurret(GameObject turretPrefab)
     {
         isUpgraded = false;
         var position = transform.position;
+        position.z -= 0.5f;
         turretGo = GameObject.Instantiate(turretPrefab, position, Quaternion.identity);
         turretGo.transform.parent = transform;
         GameObject effect = (GameObject)Instantiate(buildEffect, position,Quaternion.identity);
         Destroy(effect, 1);
+    }
 
+    public GameObject tempPrefab;
+    void TempBuild(GameObject turretPrefab)
+    {
+        var position = transform.position;
+        position.z -= 0.5f;
+        tempTurret = GameObject.Instantiate(turretPrefab, position, Quaternion.identity);
+        tempTurret.transform.parent = transform;
+        var tempColor = tempTurret.GetComponent<SpriteRenderer>().color;
+        tempColor.a = 0.67f;
+        tempTurret.GetComponent<SpriteRenderer>().color = tempColor;
+        tempTurret.GetComponent<Turret.Turret>().enabled = false;
+        tempTurret.GetComponent<SphereCollider>().enabled = false;
     }
 
 
     void OnMouseEnter()
     {
-        // Debug.Log("OnMouseEnter");
-        // if (turretGo ==null && EventSystem.current.IsPointerOverGameObject()==false)
-        // {
-        //     renderer1.material.color = Color.red;
-        //     Debug.Log("Change to red!!!");
-        // }
+        if (BuildManager.selectedTurretData != null) tempPrefab = BuildManager.selectedTurretData.turretPrefab;
+        if(tempPrefab != null && tempTurret==null && turretGo==null)
+            TempBuild(tempPrefab);
     }
+    
     void OnMouseExit()
     {
-        renderer1.material.color = Color.white;
+        if (tempTurret != null)
+        {
+            Destroy(tempTurret);
+            Debug.Log("Test");
+        }
     }
 }
