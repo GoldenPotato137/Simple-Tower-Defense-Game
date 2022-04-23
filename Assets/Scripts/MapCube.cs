@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Manager;
 using Turret;
 using UnityEngine.EventSystems;
@@ -19,8 +20,17 @@ public class MapCube : MonoBehaviour
     {
         renderer1 = GetComponent<Renderer>();
     }
-    
-    public void BuildTurret(GameObject turretPrefab)
+
+    void Update()
+    {
+        if (Input.GetMouseButton(1)) //右键取消建筑
+        {
+            Destroy(tempTurret);
+            tempPrefab = null;
+        }
+    }
+
+     public void BuildTurret(GameObject turretPrefab)
     {
         isUpgraded = false;
         var position = transform.position;

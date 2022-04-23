@@ -35,6 +35,7 @@ namespace Manager
 		void Start()
 		{
 			// upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator>();
+			selectedTurretData = null;
 		}
 
 		
@@ -90,6 +91,9 @@ namespace Manager
 					}
 				}
 			}
+
+			if (Input.GetMouseButton(1)) //右键取消当前选择
+				selectedTurretData = null;
 		}
 		
 		public void OnAxSelected(bool isOn)

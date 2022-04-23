@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Leaf.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Leaf.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Effects/BuildEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Effects/BuildEffect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/Initial.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/Initial.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" afterDir="false" />
@@ -80,7 +82,8 @@
       <option name="presentableId" value="Default" />
       <updated>1650555985046</updated>
       <workItem from="1650555988986" duration="31661000" />
-      <workItem from="1650676488356" duration="1951000" />
+      <workItem from="1650676488356" duration="2675000" />
+      <workItem from="1650679385275" duration="931000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -131,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650636556762</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="新增建造预览功能">
+      <created>1650678541296</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650678541296</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +184,7 @@
     <MESSAGE value="完成炮塔逻辑，新增Ax脚本" />
     <MESSAGE value="修改buildmanager结构" />
     <MESSAGE value="新增怪物血量条" />
-    <option name="LAST_COMMIT_MESSAGE" value="新增怪物血量条" />
+    <MESSAGE value="新增建造预览功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="新增建造预览功能" />
   </component>
 </project>

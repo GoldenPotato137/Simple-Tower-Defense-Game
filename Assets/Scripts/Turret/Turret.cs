@@ -38,6 +38,7 @@ namespace Turret
         
         void  Update()
         {
+            enemies ??= EnemyManager.enemies;
             if (isOn == false) return;
             if (faceEnemy && GetNearestEnemy()!=null)
             {
