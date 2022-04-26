@@ -12,26 +12,18 @@ namespace Manager
 		[FormerlySerializedAs("AxData")] public TurretData axData;
 		[FormerlySerializedAs("BowData")] public TurretData bowData;
 		[FormerlySerializedAs("LeafData")] public TurretData leafData;
+		[SerializeField] private UiManager uiManager;
+		[SerializeField] private GameManager gameManager;
 
 		//表示当前选择的炮塔（要建造的炮塔）
 		public static TurretData selectedTurretData;
 		//表示当前选择的炮塔（场景中的游戏物体）
 		private GameObject selectedTurretGo;
-		public Text moneyText;
-		public Animator moneyAnimator;
-		private int money = 350;
 		public GameObject upgradeCanvas;
-		private Animator upgradeCanvasAnimator;
+		// private Animator upgradeCanvasAnimator;
 		public Button buttonUpgrade;
-		private static readonly int Flicker = Animator.StringToHash("Flicker");
 		private static readonly int Hide = Animator.StringToHash("Hide");
 
-		void ChangeMoney(int change = 0)
-		{
-			money += change;
-			moneyText.text = "$" + money;
-		}
-		
 		void Start()
 		{
 			// upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator>();
@@ -55,13 +47,13 @@ namespace Manager
 						if (selectedTurretData != null && mapCube.turretGo == null)
 						{
 							//可以创建
-							if (money > selectedTurretData.cost)
+							if (GameManager.money > selectedTurretData.cost)
 							{
-								ChangeMoney(-selectedTurretData.cost);
+								gameManager.ChangeMoney(-selectedTurretData.cost);
 								mapCube.BuildTurret(selectedTurretData.turretPrefab);
 							}
-							else 
-								moneyAnimator.SetTrigger(Flicker);
+							else
+								uiManager.ShowNoEnoughMoney();
 						}
 						else if (mapCube.turretGo != null)
 						{
@@ -131,7 +123,7 @@ namespace Manager
 		
 		IEnumerator HideUpgradeUI()
 		{
-			upgradeCanvasAnimator.SetTrigger(Hide);
+			// upgradeCanvasAnimator.SetTrigger(Hide);
 			//upgradeCanvas.SetActive(false);
 			yield return new WaitForSeconds(0.8f);
 			upgradeCanvas.SetActive(false);

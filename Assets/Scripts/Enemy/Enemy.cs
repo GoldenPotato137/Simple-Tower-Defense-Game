@@ -4,15 +4,17 @@ using UnityEngine;
 
 namespace Enemy
 {
-	public abstract class Enemy : MonoBehaviour 
+	public abstract class Enemy : MonoBehaviour
 	{
+		public GameManager gameManager;
+		public EnemyManager manager;
 		private Transform[] wayPoints; //waypoint数组
 		private int index; //当前所到waypoint的下标
 		public float speed = 1; //敌人移动速度
 		public int hp;//怪物血量
+		public int money; //击败后获得金钱
 		public HealthBar healthBar;
-		public EnemyManager manager;
-			
+
 		void Start()
 		{
 			healthBar.SetMaxHealth(hp);
@@ -41,6 +43,7 @@ namespace Enemy
 		void Killed()
 		{
 			KilledOperate();
+			gameManager.ChangeMoney(money);
 			manager.RemoveEnemy(gameObject);
 			GameObject.Destroy(this.gameObject);
 		}

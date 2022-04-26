@@ -5,8 +5,9 @@ using UnityEngine.Serialization;
 
 namespace Manager
 {
-	public class EnemyManager : MonoBehaviour 
+	public class EnemyManager : MonoBehaviour
 	{
+		[SerializeField] private GameManager gameManager;
 		private static int _countEnemyAlive;
 		public Wave[] waves;
 		[FormerlySerializedAs("START")] public Transform start;
@@ -39,8 +40,9 @@ namespace Manager
 				{
 					var temp = GameObject.Instantiate(wave.enemyPrefab, start.position, Quaternion.identity);
 					temp.transform.parent = transform;
-					var component = temp.GetComponent<Enemy.Enemy>();
-					component.manager = this;
+					var enemy = temp.GetComponent<Enemy.Enemy>();
+					enemy.manager = this;
+					enemy.gameManager = gameManager;
 					enemies.Add(temp);
 					_countEnemyAlive++;
 					if(i!=wave.count-1)
