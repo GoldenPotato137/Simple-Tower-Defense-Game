@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using Turret;
+﻿using Turret;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace Manager
 {
@@ -17,12 +15,8 @@ namespace Manager
 
 		//表示当前选择的炮塔（要建造的炮塔）
 		public static TurretData selectedTurretData;
-		//表示当前选择的炮塔（场景中的游戏物体）
-		private GameObject selectedTurretGo;
-		public GameObject upgradeCanvas;
-		// private Animator upgradeCanvasAnimator;
-		public Button buttonUpgrade;
-		private static readonly int Hide = Animator.StringToHash("Hide");
+		//表示当前选择的格子（场景中的游戏物体）
+		private MapCube mapCube;
 
 		void Start()
 		{
@@ -43,95 +37,61 @@ namespace Manager
 					bool isCollider = Physics.Raycast(ray, out var hit, 350, LayerMask.GetMask("MapCube"));
 					if (isCollider)
 					{
-						MapCube mapCube = hit.collider.GetComponent<MapCube>();
+						mapCube = hit.collider.GetComponent<MapCube>();
 						if (selectedTurretData != null && mapCube.turretGo == null)
 						{
-							//可以创建
-							if (GameManager.money > selectedTurretData.cost)
+							if (GameManager.money > selectedTurretData.cost) //可以创建
 							{
 								gameManager.ChangeMoney(-selectedTurretData.cost);
-								mapCube.BuildTurret(selectedTurretData.turretPrefab);
+								mapCube.BuildTurret(selectedTurretData);
 							}
 							else
 								uiManager.ShowNoEnoughMoney();
 						}
-						else if (mapCube.turretGo != null)
-						{
-							//升级处理
-							if (mapCube.isUpgraded)
-							{
-								ShowUpgradeUI(mapCube.transform.position, true);
-								//if(mapCube.isUpgraded);
-								//{
-								//ShowUpgradeUI(mapCube.transform.position, true);
-								//}
-								//else
-								//{
-								//	ShowUpgradeUI(mapCube.transform.position, false);
-								//}
-								if(mapCube.turretGo==selectedTurretGo&& upgradeCanvas.activeInHierarchy)
-								{
-									// StartCorountine(HideUpgradeUI());
-								}
-								else
-								{
-									ShowUpgradeUI(mapCube.transform.position, mapCube.isUpgraded);
-								}
-								selectedTurretGo = mapCube.turretGo;
-							}
-						}
+						else if (mapCube.turretGo != null) //显示升级UI
+							uiManager.ShowUpgradeMenu(mapCube.transform.position);
 					}
 				}
 			}
 
-			if (Input.GetMouseButton(1)) //右键取消当前选择
+			if (Input.GetMouseButton(1)) //右键取消当前选择&升级
+			{
 				selectedTurretData = null;
+				uiManager.HideUpgradeMenu();
+			}
 		}
 		
-		public void OnAxSelected(bool isOn)
+		public void OnAxSelected()
 		{
-			if (isOn)
-			{
-				selectedTurretData = axData;
-			}
+			selectedTurretData = axData;
 		}
 
-		public  void OnBowSelected(bool isOn)
+		public  void OnBowSelected()
 		{
-			if (isOn)
-			{
-				selectedTurretData = bowData;
-			}
+			selectedTurretData = bowData;
 		}
 
-		public void OnLeafGrassSelected(bool isOn)
+		public void OnLeafGrassSelected()
 		{
-			if (isOn)
-			{
-				selectedTurretData = leafData;
-			}
+			selectedTurretData = leafData;
 		}
 		
-		void ShowUpgradeUI(Vector3 pos,bool isDisablaUpgrade=false)
-		{
-			StopCoroutine(nameof(HideUpgradeUI));
-			upgradeCanvas.SetActive(false);
-			upgradeCanvas.SetActive(true);
-			upgradeCanvas.transform.position = pos;
-			buttonUpgrade.interactable =! isDisablaUpgrade;
-		}
-		
-		IEnumerator HideUpgradeUI()
-		{
-			// upgradeCanvasAnimator.SetTrigger(Hide);
-			//upgradeCanvas.SetActive(false);
-			yield return new WaitForSeconds(0.8f);
-			upgradeCanvas.SetActive(false);
-		}
+		// IEnumerator HideUpgradeUI()
+		// {
+		// 	// upgradeCanvasAnimator.SetTrigger(Hide);
+		// 	//upgradeCanvas.SetActive(false);
+		// 	yield return new WaitForSeconds(0.8f);
+		// 	upgradeCanvas.SetActive(false);
+		// }
 		
 		public void OnUpgradeButtonDown()
 		{
-			//TODO
+			Debug.Log("test1");
+			if (mapCube == null || mapCube.turretGo == null) return;
+			Debug.Log("test2");
+			if (!mapCube.UpgradeTurret()) //不够钱
+				uiManager.ShowNoEnoughMoney();
+			uiManager.FlushMoney();
 		}
 		
 		public void OnDestroyButtonDown()

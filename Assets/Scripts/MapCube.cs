@@ -1,25 +1,15 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using Manager;
 using Turret;
-using UnityEngine.EventSystems;
 
 public class MapCube : MonoBehaviour 
 {
     [HideInInspector]
     public GameObject turretGo;//保存当前cube身上的炮塔
     public GameObject tempTurret; //用于预览的临时炮塔
-    public  bool isUpgraded = false;
-    [HideInInspector]
-    public GameObject buildEffect;
-    private Renderer renderer1;
-
-    void Start()
-    {
-        renderer1 = GetComponent<Renderer>();
-    }
+    [HideInInspector] public GameObject buildEffect;
+    private TurretData turretData;
+    private int level;
 
     void Update()
     {
@@ -30,15 +20,35 @@ public class MapCube : MonoBehaviour
         }
     }
 
-     public void BuildTurret(GameObject turretPrefab)
+    public void BuildTurret(TurretData turret)
     {
-        isUpgraded = false;
+        turretData = turret;
+        level = 1;
+        var turretPrefab = turret.turretPrefab;
+        var position = transform.position; 
+        position.z -= 0.5f; 
+        turretGo = GameObject.Instantiate(turretPrefab, position, Quaternion.identity); 
+        turretGo.transform.parent = transform; 
+        GameObject effect = Instantiate(buildEffect, position,Quaternion.identity); 
+        Destroy(effect, 1); 
+    }
+
+    public bool UpgradeTurret()
+    {
+        if (level == 3) return false;
+        if (level == 1 && GameManager.money < turretData.costUpgraded) return false;
+        if (level == 2 && GameManager.money < turretData.costUltimate) return false;
+        Destroy(turretGo);
         var position = transform.position;
         position.z -= 0.5f;
-        turretGo = GameObject.Instantiate(turretPrefab, position, Quaternion.identity);
-        turretGo.transform.parent = transform;
-        GameObject effect = (GameObject)Instantiate(buildEffect, position,Quaternion.identity);
+        turretGo = Instantiate(level == 1 ? turretData.turretUpgradedPrefab : turretData.turretUltimatePrefab,
+            position, Quaternion.identity, transform);
+        if (level == 1) GameManager.money -= turretData.costUpgraded;
+        if (level == 2) GameManager.money -= turretData.costUltimate;
+        level++;
+        GameObject effect = Instantiate(buildEffect, position, Quaternion.identity);
         Destroy(effect, 1);
+        return true;
     }
 
     public GameObject tempPrefab;
@@ -54,10 +64,10 @@ public class MapCube : MonoBehaviour
         tempTurret.GetComponent<Turret.Turret>().enabled = false;
         tempTurret.GetComponent<SphereCollider>().enabled = false;
     }
-
-
+    
     void OnMouseEnter()
     {
+        if (GameManager.isPause) return; //暂停时停止预览
         if (BuildManager.selectedTurretData != null) tempPrefab = BuildManager.selectedTurretData.turretPrefab;
         if(tempPrefab != null && tempTurret==null && turretGo==null)
             TempBuild(tempPrefab);
@@ -68,7 +78,7 @@ public class MapCube : MonoBehaviour
         if (tempTurret != null)
         {
             Destroy(tempTurret);
-            Debug.Log("Test");
+            // Debug.Log("Test");
         }
     }
 }

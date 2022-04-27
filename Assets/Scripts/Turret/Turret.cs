@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Manager;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Turret
 {
@@ -12,7 +11,7 @@ namespace Turret
         [SerializeField] private float attackRateTime = 1;//多少秒攻击一次
         [SerializeField] protected float fireRange; //射程
         [SerializeField] protected int damage;//伤害
-        private float timer = 0;
+        private float timer;
         public bool isOn = true; //炮塔是否启用
         public GameObject bulletPrefab;//子弹
         public Transform firePosition;
@@ -54,22 +53,5 @@ namespace Turret
                     timer = 0;
             }
         }
-        
-        // void OnTriggerEnter(Collider col)
-        // {
-        //     if (col.tag =="Enemy")
-        //     {
-        //         enemys.Add(col.gameObject);
-        //     }
-        //
-        // }
-        // void OnTriggerExit(Collider col)
-        // {
-        //     if (col.tag =="Enemy")
-        //     {
-        //         enemys.Remove (col.gameObject);
-        //     }
-        // }
-        //
     }
 }
