@@ -51,6 +51,18 @@ public class MapCube : MonoBehaviour
         return true;
     }
 
+    public void DestroyTurret()
+    {
+        Destroy(turretGo);
+        var transform1 = transform;
+        GameObject effect = Instantiate(buildEffect, transform1.position, Quaternion.identity, transform1);
+        Destroy(effect, 1);
+        if (level == 1) GameManager.money += (int) (0.5 * turretData.cost);
+        if (level == 2) GameManager.money += (int) (0.5 * (turretData.cost + turretData.costUpgraded));
+        if (level == 3) GameManager.money += (int) (0.5 * (turretData.cost + turretData.costUpgraded + turretData.costUltimate));
+    }
+    
+
     public GameObject tempPrefab;
     void TempBuild(GameObject turretPrefab)
     {

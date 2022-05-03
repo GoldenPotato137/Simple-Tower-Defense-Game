@@ -5,36 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/升级.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/升级.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/拆除键.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/拆除键.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +89,9 @@
       <workItem from="1650676488356" duration="2675000" />
       <workItem from="1650679385275" duration="2167000" />
       <workItem from="1650962199795" duration="6424000" />
-      <workItem from="1650974063848" duration="17786000" />
+      <workItem from="1650974063848" duration="20065000" />
+      <workItem from="1651205511456" duration="2268000" />
+      <workItem from="1651504557380" duration="2270000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -183,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650973675366</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="完成炮塔升级系统">
+      <created>1651076889130</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1651076889131</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,6 +216,7 @@
     <MESSAGE value="新增建造预览功能" />
     <MESSAGE value="修复Ax,Leaf炮塔，新增右键取消建筑功能" />
     <MESSAGE value="完成UIManager,新增暂停UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成UIManager,新增暂停UI" />
+    <MESSAGE value="完成炮塔升级系统" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成炮塔升级系统" />
   </component>
 </project>

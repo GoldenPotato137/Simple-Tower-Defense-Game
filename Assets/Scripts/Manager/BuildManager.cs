@@ -30,6 +30,7 @@ namespace Manager
 			if (Camera.main == null) return;
 			if (Input.GetMouseButtonDown(0)) 
 			{
+				Debug.Log("test1");
 				//表示鼠标的建造炮塔
 				if (EventSystem.current.IsPointerOverGameObject()==false)
 				{
@@ -37,10 +38,11 @@ namespace Manager
 					bool isCollider = Physics.Raycast(ray, out var hit, 350, LayerMask.GetMask("MapCube"));
 					if (isCollider)
 					{
+						Debug.Log("test2");
 						mapCube = hit.collider.GetComponent<MapCube>();
 						if (selectedTurretData != null && mapCube.turretGo == null)
 						{
-							if (GameManager.money > selectedTurretData.cost) //可以创建
+							if (GameManager.money >= selectedTurretData.cost) //可以创建
 							{
 								gameManager.ChangeMoney(-selectedTurretData.cost);
 								mapCube.BuildTurret(selectedTurretData);
@@ -86,9 +88,7 @@ namespace Manager
 		
 		public void OnUpgradeButtonDown()
 		{
-			Debug.Log("test1");
 			if (mapCube == null || mapCube.turretGo == null) return;
-			Debug.Log("test2");
 			if (!mapCube.UpgradeTurret()) //不够钱
 				uiManager.ShowNoEnoughMoney();
 			uiManager.FlushMoney();
@@ -96,7 +96,10 @@ namespace Manager
 		
 		public void OnDestroyButtonDown()
 		{
-			//TODO
+			if (mapCube == null || mapCube.turretGo == null) return;
+			mapCube.DestroyTurret();
+			uiManager.HideUpgradeMenu();
+			uiManager.FlushMoney();
 		}
 	}
 }
