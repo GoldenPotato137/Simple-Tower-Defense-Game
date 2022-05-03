@@ -9,12 +9,12 @@
 
         protected override void KilledOperate()
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
 
         protected override void DamagedOperate(int damaged)
         {
-            throw new System.NotImplementedException();
+            // throw new System.NotImplementedException();
         }
     }
 }

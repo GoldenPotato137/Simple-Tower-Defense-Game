@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="Add Feature: 新增杀敌后获得金钱*动画*&#10;Fix Code: 移动杀敌获得金钱代码于EnemyManager">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs.meta" afterDir="false" />
+    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="素材补充">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/AddMoney.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/AddMoney.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Bandage.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Bandage.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +90,7 @@
       <workItem from="1650962199795" duration="6424000" />
       <workItem from="1650974063848" duration="20065000" />
       <workItem from="1651205511456" duration="2268000" />
-      <workItem from="1651504557380" duration="13188000" />
+      <workItem from="1651504557380" duration="13888000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -191,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651571267742</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Feature Add:新增主菜单&#10;Bug Fix:获得金钱新增+号">
+      <created>1651593618846</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1651593618846</updated>
+    </task>
+    <task id="LOCAL-00016" summary="素材补充">
+      <created>1651593699803</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1651593699803</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +254,8 @@
     <MESSAGE value="实装升级删除贴图&#10;add feature：删除后隐藏升级菜单" />
     <MESSAGE value="Add Feature： 升级删除价格显示" />
     <MESSAGE value="Add Feature: 新增杀敌后获得金钱*动画*&#10;Fix Code: 移动杀敌获得金钱代码于EnemyManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Feature: 新增杀敌后获得金钱*动画*&#10;Fix Code: 移动杀敌获得金钱代码于EnemyManager" />
+    <MESSAGE value="Feature Add:新增主菜单&#10;Bug Fix:获得金钱新增+号" />
+    <MESSAGE value="素材补充" />
+    <option name="LAST_COMMIT_MESSAGE" value="素材补充" />
   </component>
 </project>
