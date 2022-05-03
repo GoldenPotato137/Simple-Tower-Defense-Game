@@ -20,7 +20,7 @@ namespace UI
 
         public void SetMoney(int money)
         {
-            text.text = money.ToString();
+            text.text = "+" + money.ToString();
         }
     }
 }
