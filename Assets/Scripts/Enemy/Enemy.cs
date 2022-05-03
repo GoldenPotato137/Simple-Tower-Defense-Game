@@ -6,7 +6,6 @@ namespace Enemy
 {
 	public abstract class Enemy : MonoBehaviour
 	{
-		public GameManager gameManager;
 		public EnemyManager manager;
 		private Transform[] wayPoints; //waypoint数组
 		private int index; //当前所到waypoint的下标
@@ -43,8 +42,7 @@ namespace Enemy
 		void Killed()
 		{
 			KilledOperate();
-			gameManager.ChangeMoney(money);
-			manager.RemoveEnemy(gameObject);
+			manager.RemoveEnemy(gameObject, true);
 			GameObject.Destroy(this.gameObject);
 		}
 		
@@ -69,7 +67,7 @@ namespace Enemy
 		void ReachDestination()
 		{
 			ReachTargetOperate();
-			manager.RemoveEnemy(gameObject);
+			manager.RemoveEnemy(gameObject, false);
 			GameObject.Destroy(this.gameObject);
 		}
 	}

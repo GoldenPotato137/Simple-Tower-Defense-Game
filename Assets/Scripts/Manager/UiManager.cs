@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UI;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Manager
@@ -7,6 +8,7 @@ namespace Manager
     {
         [SerializeField] private GameObject pauseMenu;
         [SerializeField] private GameObject upgradeMenu;
+        [SerializeField] private GameObject addMoney;
         private static readonly int Flicker = Animator.StringToHash("Flicker");
         public Text moneyText;
         public Text upgradePrice, deletePrice;
@@ -45,6 +47,18 @@ namespace Manager
         public void HideUpgradeMenu()
         {
             upgradeMenu.SetActive(false);
+        }
+
+        /// <summary>
+        /// 在指定位置播放加金钱*动画*
+        /// </summary>
+        /// <param name="pos">位置</param>
+        /// <param name="money">钱数</param>
+        public void PopAddMoney(Vector3 pos,int money)
+        {
+            GameObject temp = Instantiate(addMoney, new Vector3(pos.x, pos.y, pos.z - 1), Quaternion.identity,
+                transform);
+            temp.GetComponent<AddMoney>().SetMoney(money);
         }
         
         public void Resume()

@@ -8,6 +8,7 @@ namespace Manager
 	public class EnemyManager : MonoBehaviour
 	{
 		[SerializeField] private GameManager gameManager;
+		[SerializeField] private UiManager uiManager;
 		private static int _countEnemyAlive;
 		public Wave[] waves;
 		[FormerlySerializedAs("START")] public Transform start;
@@ -26,9 +27,15 @@ namespace Manager
 			StopCoroutine(coroutine);
 		}
 
-		public void RemoveEnemy(GameObject enemy)
+		public void RemoveEnemy(GameObject enemy, bool isKilled)
 		{
 			enemies.Remove(enemy);
+			if (isKilled) //击杀：生成金钱动画、添加金钱
+			{
+				var temp = enemy.GetComponent<Enemy.Enemy>();
+				gameManager.ChangeMoney(temp.money);
+				uiManager.PopAddMoney(enemy.transform.position, temp.money);
+			}
 			_countEnemyAlive--;
 		}
 		
@@ -40,9 +47,7 @@ namespace Manager
 				{
 					var temp = GameObject.Instantiate(wave.enemyPrefab, start.position, Quaternion.identity);
 					temp.transform.parent = transform;
-					var enemy = temp.GetComponent<Enemy.Enemy>();
-					enemy.manager = this;
-					enemy.gameManager = gameManager;
+					temp.GetComponent<Enemy.Enemy>().manager = this;
 					enemies.Add(temp);
 					_countEnemyAlive++;
 					if(i!=wave.count-1)
