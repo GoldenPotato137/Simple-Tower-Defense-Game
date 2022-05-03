@@ -30,7 +30,6 @@ namespace Manager
 			if (Camera.main == null) return;
 			if (Input.GetMouseButtonDown(0)) 
 			{
-				Debug.Log("test1");
 				//表示鼠标的建造炮塔
 				if (EventSystem.current.IsPointerOverGameObject()==false)
 				{
@@ -38,7 +37,6 @@ namespace Manager
 					bool isCollider = Physics.Raycast(ray, out var hit, 350, LayerMask.GetMask("MapCube"));
 					if (isCollider)
 					{
-						Debug.Log("test2");
 						mapCube = hit.collider.GetComponent<MapCube>();
 						if (selectedTurretData != null && mapCube.turretGo == null)
 						{
@@ -51,7 +49,11 @@ namespace Manager
 								uiManager.ShowNoEnoughMoney();
 						}
 						else if (mapCube.turretGo != null) //显示升级UI
-							uiManager.ShowUpgradeMenu(mapCube.transform.position);
+						{
+							var temp = mapCube.GetComponent<MapCube>();
+							uiManager.ShowUpgradeMenu(mapCube.transform.position, temp.GetUpgradePrice(),
+								temp.GetDeletePrice());
+						}
 					}
 				}
 			}
@@ -91,6 +93,7 @@ namespace Manager
 			if (mapCube == null || mapCube.turretGo == null) return;
 			if (!mapCube.UpgradeTurret()) //不够钱
 				uiManager.ShowNoEnoughMoney();
+			uiManager.HideUpgradeMenu();
 			uiManager.FlushMoney();
 		}
 		

@@ -9,6 +9,7 @@ namespace Manager
         [SerializeField] private GameObject upgradeMenu;
         private static readonly int Flicker = Animator.StringToHash("Flicker");
         public Text moneyText;
+        public Text upgradePrice, deletePrice;
         public Animator moneyAnimator;
         
         /// <summary>
@@ -28,8 +29,12 @@ namespace Manager
         /// 在某个坐标旁边显示升级菜单
         /// </summary>
         /// <param name="pos">坐标</param>
-        public void ShowUpgradeMenu(Vector3 pos)
+        /// <param name="uPrice">升级价格</param>
+        /// <param name="dPrice">删除返现</param>
+        public void ShowUpgradeMenu(Vector3 pos,int uPrice,int dPrice)
         {
+            upgradePrice.text = uPrice.ToString();
+            deletePrice.text = dPrice.ToString();
             upgradeMenu.transform.position = new Vector3(pos.x + 0.8f, pos.y, pos.z - 1);
             upgradeMenu.SetActive(true);
         }

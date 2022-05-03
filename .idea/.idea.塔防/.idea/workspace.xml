@@ -4,14 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/升级.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/升级.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/拆除键.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resource/Sprites/拆除键.png.meta" afterDir="false" />
+    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="实装升级删除贴图&#10;add feature：删除后隐藏升级菜单">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Bandit.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Bandit.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 3/Enemy 3.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Initial/Enemy 2.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Initial/Enemy 2.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/BuildManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MapCube.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +94,7 @@
       <workItem from="1650962199795" duration="6424000" />
       <workItem from="1650974063848" duration="20065000" />
       <workItem from="1651205511456" duration="2268000" />
-      <workItem from="1651504557380" duration="2270000" />
+      <workItem from="1651504557380" duration="5094000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -170,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651076889131</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="实装升级删除贴图&#10;add feature：删除后隐藏升级菜单">
+      <created>1651563788286</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1651563788286</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,6 +227,7 @@
     <MESSAGE value="修复Ax,Leaf炮塔，新增右键取消建筑功能" />
     <MESSAGE value="完成UIManager,新增暂停UI" />
     <MESSAGE value="完成炮塔升级系统" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成炮塔升级系统" />
+    <MESSAGE value="实装升级删除贴图&#10;add feature：删除后隐藏升级菜单" />
+    <option name="LAST_COMMIT_MESSAGE" value="实装升级删除贴图&#10;add feature：删除后隐藏升级菜单" />
   </component>
 </project>

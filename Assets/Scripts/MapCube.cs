@@ -8,7 +8,7 @@ public class MapCube : MonoBehaviour
     public GameObject turretGo;//保存当前cube身上的炮塔
     public GameObject tempTurret; //用于预览的临时炮塔
     [HideInInspector] public GameObject buildEffect;
-    private TurretData turretData;
+    public TurretData turretData;
     private int level;
 
     void Update()
@@ -33,11 +33,25 @@ public class MapCube : MonoBehaviour
         Destroy(effect, 1); 
     }
 
+    public int GetUpgradePrice()
+    {
+        int ans = turretData.costUpgraded;
+        if (level == 2) ans = turretData.costUltimate;
+        if (level == 3) ans = 9999;
+        return ans;
+    }
+
+    public int GetDeletePrice()
+    {
+        int ans = turretData.cost;
+        if (level >= 2) ans += turretData.costUpgraded;
+        if (level >= 3) ans += turretData.costUltimate;
+        return (int)(ans * 0.5);
+    }
+
     public bool UpgradeTurret()
     {
-        if (level == 3) return false;
-        if (level == 1 && GameManager.money < turretData.costUpgraded) return false;
-        if (level == 2 && GameManager.money < turretData.costUltimate) return false;
+        if (level == 3 || GameManager.money < GetUpgradePrice()) return false;
         Destroy(turretGo);
         var position = transform.position;
         position.z -= 0.5f;
@@ -57,9 +71,7 @@ public class MapCube : MonoBehaviour
         var transform1 = transform;
         GameObject effect = Instantiate(buildEffect, transform1.position, Quaternion.identity, transform1);
         Destroy(effect, 1);
-        if (level == 1) GameManager.money += (int) (0.5 * turretData.cost);
-        if (level == 2) GameManager.money += (int) (0.5 * (turretData.cost + turretData.costUpgraded));
-        if (level == 3) GameManager.money += (int) (0.5 * (turretData.cost + turretData.costUpgraded + turretData.costUltimate));
+        GameManager.money += GetDeletePrice();
     }
     
 
