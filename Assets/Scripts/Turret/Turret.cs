@@ -14,7 +14,7 @@ namespace Turret
         private float timer;
         public bool isOn = true; //炮塔是否启用
         public GameObject bulletPrefab;//子弹
-        public Transform firePosition;
+        public List<Transform> firePosition;
         // public Transform head;
         
         protected abstract bool Attack();
@@ -39,11 +39,11 @@ namespace Turret
         {
             enemies ??= EnemyManager.enemies;
             if (isOn == false) return;
-            if (faceEnemy && GetNearestEnemy()!=null)
+            if (faceEnemy && GetNearestEnemy()!=null && (GetNearestEnemy().transform.position-transform.position).magnitude <= fireRange)
             {
                 var target = GetNearestEnemy();
                 var position = transform.position;
-                transform.Rotate(0,0,Vector2.SignedAngle(firePosition.position - position,
+                transform.Rotate(0, 0, Time.deltaTime * 10 * Vector2.SignedAngle(firePosition[0].position - position,
                     target.transform.position - position));
             }
             timer += Time.deltaTime;

@@ -4,14 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="素材补充">
+    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="Feature Add:完成剩下几个小怪的血条">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/BulletBow.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/BulletBow.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/BulletBow.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/BulletBow.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Bandage.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Bandage.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy/Enemy 4/Enemy 4.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_one.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_three.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Ax/Ax_two.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_one.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_three.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/Bow/Bow_two.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Turret.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +73,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="25344">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="25344" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -90,7 +98,7 @@
       <workItem from="1650962199795" duration="6424000" />
       <workItem from="1650974063848" duration="20065000" />
       <workItem from="1651205511456" duration="2268000" />
-      <workItem from="1651504557380" duration="13888000" />
+      <workItem from="1651504557380" duration="22136000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -204,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651593699803</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Feature Add:完成剩下几个小怪的血条">
+      <created>1651594438804</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1651594438804</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +271,7 @@
     <MESSAGE value="Add Feature: 新增杀敌后获得金钱*动画*&#10;Fix Code: 移动杀敌获得金钱代码于EnemyManager" />
     <MESSAGE value="Feature Add:新增主菜单&#10;Bug Fix:获得金钱新增+号" />
     <MESSAGE value="素材补充" />
-    <option name="LAST_COMMIT_MESSAGE" value="素材补充" />
+    <MESSAGE value="Feature Add:完成剩下几个小怪的血条" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature Add:完成剩下几个小怪的血条" />
   </component>
 </project>
