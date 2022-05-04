@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="Feature Add：新增弓箭子弹&#10;Feature Add: 完成弓箭升级多发子弹功能&#10;Feature Add: 无法攻击到敌人时不做旋转&#10;Feature Fix: 调整弓箭攻击距离">
+    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="Feature Add: 实装对应的贴图&#10;Feature Add: 实装重开与返回主菜单的功能">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Flag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Flag.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scene/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +90,7 @@
       <workItem from="1650962199795" duration="6424000" />
       <workItem from="1650974063848" duration="20065000" />
       <workItem from="1651205511456" duration="2268000" />
-      <workItem from="1651504557380" duration="25106000" />
+      <workItem from="1651504557380" duration="28808000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -215,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651632922246</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Feature Add: 实装对应的贴图&#10;Feature Add: 实装重开与返回主菜单的功能">
+      <created>1651636593209</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1651636593209</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,6 +279,7 @@
     <MESSAGE value="素材补充" />
     <MESSAGE value="Feature Add:完成剩下几个小怪的血条" />
     <MESSAGE value="Feature Add：新增弓箭子弹&#10;Feature Add: 完成弓箭升级多发子弹功能&#10;Feature Add: 无法攻击到敌人时不做旋转&#10;Feature Fix: 调整弓箭攻击距离" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature Add：新增弓箭子弹&#10;Feature Add: 完成弓箭升级多发子弹功能&#10;Feature Add: 无法攻击到敌人时不做旋转&#10;Feature Fix: 调整弓箭攻击距离" />
+    <MESSAGE value="Feature Add: 实装对应的贴图&#10;Feature Add: 实装重开与返回主菜单的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature Add: 实装对应的贴图&#10;Feature Add: 实装重开与返回主菜单的功能" />
   </component>
 </project>

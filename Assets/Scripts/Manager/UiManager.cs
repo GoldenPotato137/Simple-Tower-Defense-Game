@@ -9,6 +9,8 @@ namespace Manager
         [SerializeField] private GameObject pauseMenu;
         [SerializeField] private GameObject upgradeMenu;
         [SerializeField] private GameObject addMoney;
+        [SerializeField] private GameObject failedMenu;
+        [SerializeField] private GameObject winMenu;
         private static readonly int Flicker = Animator.StringToHash("Flicker");
         public Text moneyText;
         public Text upgradePrice, deletePrice;
@@ -59,6 +61,22 @@ namespace Manager
             GameObject temp = Instantiate(addMoney, new Vector3(pos.x, pos.y, pos.z - 1), Quaternion.identity,
                 transform);
             temp.GetComponent<AddMoney>().SetMoney(money);
+        }
+
+        /// <summary>
+        /// 显示失败菜单
+        /// </summary>
+        public void ShowFailedMenu()
+        {
+            failedMenu.SetActive(true);
+        }
+        
+        /// <summary>
+        /// 显示胜利菜单
+        /// </summary>
+        public void ShowWinMenu()
+        {
+            winMenu.SetActive(true);
         }
         
         public void Resume()

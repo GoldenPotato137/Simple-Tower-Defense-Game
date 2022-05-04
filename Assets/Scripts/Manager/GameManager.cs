@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Turret;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -8,6 +9,8 @@ namespace Manager
 	{
 		[SerializeField] private EnemyManager enemyManager;
 		[SerializeField] private UiManager uiManager;
+		[SerializeField] private Flag flag;
+		[SerializeField] private int hp; //血量
 		public GameObject endUI;
 		public Text endMessage;
 		public static bool isPause;
@@ -16,8 +19,9 @@ namespace Manager
 		void Awake()
 		{
 			Resume();
-			//       Instance = this;
-			// enemySpawner = GetComponent<EnemySpawner>();
+			flag.SetMaxHealth(hp);
+			//Instance = this;
+			//enemySpawner = GetComponent<EnemySpawner>();
 		}
 		
 		public static void Resume()
@@ -37,19 +41,25 @@ namespace Manager
 			money += change;
 			uiManager.FlushMoney();
 		}
+
+		public void ChangeHp(int x)
+		{
+			hp += x;
+			flag.SetHealth(hp);
+			if (hp <= 0)
+				 Failed();
+		}
 		
 		public void Win()
 		{
-			// endUI.SetActive(true);
-			// endMessage.text = "胜利";
-
+			Pause();
+			uiManager.ShowWinMenu();
 		}
 	
 		public void Failed()
 		{
-			// enemySpawner.Stop();
-			// 	endUI.SetActive(true);
-			// 	endMessage.text = "失败";
+			Pause();
+			uiManager.ShowFailedMenu();
 		}
 	
 		public void OnButtonRetry()

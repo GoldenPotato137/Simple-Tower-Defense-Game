@@ -36,6 +36,10 @@ namespace Manager
 				gameManager.ChangeMoney(temp.money);
 				uiManager.PopAddMoney(enemy.transform.position, temp.money);
 			}
+			else //到达目的地
+			{
+				gameManager.ChangeHp(-1);
+			}
 			_countEnemyAlive--;
 		}
 		
@@ -60,8 +64,7 @@ namespace Manager
 				yield return new WaitForSeconds(waveRate);
 			}
 			
-			Debug.Log("test");
-			// GameManager.Instance.Win();
+			gameManager.Win();
 		}
 	
 	}
