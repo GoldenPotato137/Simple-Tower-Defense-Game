@@ -15,6 +15,7 @@ namespace Manager
 		
 		void Awake()
 		{
+			Resume();
 			//       Instance = this;
 			// enemySpawner = GetComponent<EnemySpawner>();
 		}

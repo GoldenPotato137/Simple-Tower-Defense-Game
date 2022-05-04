@@ -60,10 +60,7 @@ namespace Manager
 				yield return new WaitForSeconds(waveRate);
 			}
 			
-			while (_countEnemyAlive>0)
-			{
-				yield return 0;
-			}
+			Debug.Log("test");
 			// GameManager.Instance.Win();
 		}
 	
