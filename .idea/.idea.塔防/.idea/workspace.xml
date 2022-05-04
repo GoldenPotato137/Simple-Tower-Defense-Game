@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="Feature Add: 实装对应的贴图&#10;Feature Add: 实装重开与返回主菜单的功能">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Flag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Flag.cs.meta" afterDir="false" />
+    <list default="true" id="f135310a-a004-4066-ae17-d382c38f8962" name="Changes" comment="Feature Add: 新增家的血量&#10;Feature Add: 实装游戏失败&#10;Feature Add: 实装游戏胜利">
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/BulletLeaf2.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/BulletLeaf2.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/BulletLeaf3.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet/BulletLeaf3.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.塔防/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scene/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scene/MainMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/EnemyManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager/UiManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet/Bullet.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_one.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_three.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Turret/LeafGrass/LeafGrass_two.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Bow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Bow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/BulletLeaf.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/BulletLeaf.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Turret/Leaf.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Turret/Leaf.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +97,7 @@
       <workItem from="1650962199795" duration="6424000" />
       <workItem from="1650974063848" duration="20065000" />
       <workItem from="1651205511456" duration="2268000" />
-      <workItem from="1651504557380" duration="28808000" />
+      <workItem from="1651504557380" duration="32968000" />
     </task>
     <task id="LOCAL-00001" summary="初始提交">
       <created>1650556736698</created>
@@ -225,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651636593209</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Feature Add: 新增家的血量&#10;Feature Add: 实装游戏失败&#10;Feature Add: 实装游戏胜利">
+      <created>1651655514331</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1651655514331</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +294,7 @@
     <MESSAGE value="Feature Add:完成剩下几个小怪的血条" />
     <MESSAGE value="Feature Add：新增弓箭子弹&#10;Feature Add: 完成弓箭升级多发子弹功能&#10;Feature Add: 无法攻击到敌人时不做旋转&#10;Feature Fix: 调整弓箭攻击距离" />
     <MESSAGE value="Feature Add: 实装对应的贴图&#10;Feature Add: 实装重开与返回主菜单的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature Add: 实装对应的贴图&#10;Feature Add: 实装重开与返回主菜单的功能" />
+    <MESSAGE value="Feature Add: 新增家的血量&#10;Feature Add: 实装游戏失败&#10;Feature Add: 实装游戏胜利" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature Add: 新增家的血量&#10;Feature Add: 实装游戏失败&#10;Feature Add: 实装游戏胜利" />
   </component>
 </project>
