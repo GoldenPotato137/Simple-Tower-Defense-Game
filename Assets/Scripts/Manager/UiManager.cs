@@ -1,5 +1,8 @@
-﻿using UI;
+﻿using Enums;
+using Helper;
+using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Manager
@@ -21,7 +24,7 @@ namespace Manager
         /// </summary>
         public void FlushMoney()
         {
-            moneyText.text = "$" + GameManager.money;
+            moneyText.text = "$" + GameManager.Money;
         }
 
         public void ShowNoEnoughMoney()
@@ -82,24 +85,34 @@ namespace Manager
         public void Resume()
         {
             pauseMenu.SetActive(false);
-            GameManager.Resume();
+            EventBus.Trigger(Events.UIResumePushed);
         }
 
         private void Pause()
         {
             pauseMenu.SetActive(true);
-            GameManager.Pause();
+            EventBus.Trigger(Events.UIPausePushed);
         }
         
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (GameManager.isPause)
+                if (GameManager.IsPause)
                     Resume();
                 else
                     Pause();
             }
+        }
+        
+        public void OnButtonRetry()
+        {
+            EventBus.Trigger(Events.LevelStart);
+        }
+
+        public void OnButtonMenu()
+        {
+            EventBus.Trigger(Events.LevelQuit);
         }
     }
 }

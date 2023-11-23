@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using Enums;
+using Helper;
+using UnityEngine;
 
 namespace UI
 {
@@ -9,7 +10,7 @@ namespace UI
         
         public void SelectGame()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            EventBus.Trigger(Events.LevelStart);
         }
 
         public void ShowMakerMenu()

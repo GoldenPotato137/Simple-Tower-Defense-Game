@@ -7,7 +7,7 @@ namespace Turret
     {
         protected override bool Attack()
         {
-            if (EnemyManager.enemies.Count > 0)
+            if (EnemyManager.Enemies.Count > 0)
             {
                 var temp = Instantiate(bulletPrefab, firePosition[0].position, Quaternion.identity);
                 temp.GetComponent<BulletLeaf>().damage = damage;

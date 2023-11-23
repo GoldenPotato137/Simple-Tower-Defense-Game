@@ -19,7 +19,7 @@ namespace Turret
 
         GameObject GetNearestEnemy()
         {
-            enemies = EnemyManager.enemies;
+            enemies = EnemyManager.Enemies;
             if (enemies == null || enemies.Count == 0) return null;
             GameObject ans = enemies[0];
             foreach (var enemy in enemies)
@@ -54,7 +54,7 @@ namespace Turret
             if (enemies == null || cntTime < deltaTime) return; //没有敌人或攻击冷却中
             cntTime = 0;
             List<GameObject> toKill = new List<GameObject>();
-            foreach (var target in EnemyManager.enemies)
+            foreach (var target in EnemyManager.Enemies)
                 if((target.transform.position - transform.position).magnitude< distanceArriveTarget)
                     toKill.Add(target);
             foreach (var target in toKill)

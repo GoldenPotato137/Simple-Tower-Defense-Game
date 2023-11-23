@@ -51,14 +51,14 @@ public class MapCube : MonoBehaviour
 
     public bool UpgradeTurret()
     {
-        if (level == 3 || GameManager.money < GetUpgradePrice()) return false;
+        if (level == 3 || GameManager.Money < GetUpgradePrice()) return false;
         Destroy(turretGo);
         var position = transform.position;
         position.z -= 0.5f;
         turretGo = Instantiate(level == 1 ? turretData.turretUpgradedPrefab : turretData.turretUltimatePrefab,
             position, Quaternion.identity, transform);
-        if (level == 1) GameManager.money -= turretData.costUpgraded;
-        if (level == 2) GameManager.money -= turretData.costUltimate;
+        if (level == 1) GameManager.Money -= turretData.costUpgraded;
+        if (level == 2) GameManager.Money -= turretData.costUltimate;
         level++;
         GameObject effect = Instantiate(buildEffect, position, Quaternion.identity);
         Destroy(effect, 1);
@@ -71,7 +71,7 @@ public class MapCube : MonoBehaviour
         var transform1 = transform;
         GameObject effect = Instantiate(buildEffect, transform1.position, Quaternion.identity, transform1);
         Destroy(effect, 1);
-        GameManager.money += GetDeletePrice();
+        GameManager.Money += GetDeletePrice();
     }
     
 
@@ -91,8 +91,8 @@ public class MapCube : MonoBehaviour
     
     void OnMouseEnter()
     {
-        if (GameManager.isPause) return; //暂停时停止预览
-        if (BuildManager.selectedTurretData != null) tempPrefab = BuildManager.selectedTurretData.turretPrefab;
+        if (GameManager.IsPause) return; //暂停时停止预览
+        if (BuildManager.SelectedTurretData != null) tempPrefab = BuildManager.SelectedTurretData.turretPrefab;
         if(tempPrefab != null && tempTurret==null && turretGo==null)
             TempBuild(tempPrefab);
     }

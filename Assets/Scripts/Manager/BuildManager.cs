@@ -1,31 +1,36 @@
 ﻿using Turret;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
 
 namespace Manager
 {
-	public class BuildManager : MonoBehaviour 
+	public class BuildManager : ManagerBase 
 	{
-		[FormerlySerializedAs("AxData")] public TurretData axData;
-		[FormerlySerializedAs("BowData")] public TurretData bowData;
-		[FormerlySerializedAs("LeafData")] public TurretData leafData;
-		[SerializeField] private UiManager uiManager;
-		[SerializeField] private GameManager gameManager;
+		private TurretData _axDataPrefab;
+		private TurretData _bowDataPrefab;
+		private TurretData _leafDataPrefab;
+		private readonly UiManager _uiManager;
+		private readonly GameManager _gameManager;
 
 		//表示当前选择的炮塔（要建造的炮塔）
-		public static TurretData selectedTurretData;
+		public static TurretData SelectedTurretData;
 		//表示当前选择的格子（场景中的游戏物体）
-		private MapCube mapCube;
+		private MapCube _mapCube;
 
-		void Start()
+		public BuildManager(GameManager gameManager, UiManager uiManager)
 		{
-			// upgradeCanvasAnimator = upgradeCanvas.GetComponent<Animator>();
-			selectedTurretData = null;
+			SelectedTurretData = null;
+			_gameManager = gameManager;
+			_uiManager = uiManager;
+		}
+		
+		public override void Stop()
+		{
+			throw new System.NotImplementedException();
 		}
 
 		
-		void Update()
+		public override void Update()
 		{
 			if (Camera.main == null) return;
 			if (Input.GetMouseButtonDown(0)) 
@@ -37,21 +42,21 @@ namespace Manager
 					bool isCollider = Physics.Raycast(ray, out var hit, 350, LayerMask.GetMask("MapCube"));
 					if (isCollider)
 					{
-						mapCube = hit.collider.GetComponent<MapCube>();
-						if (selectedTurretData != null && mapCube.turretGo == null)
+						_mapCube = hit.collider.GetComponent<MapCube>();
+						if (SelectedTurretData != null && _mapCube.turretGo == null)
 						{
-							if (GameManager.money >= selectedTurretData.cost) //可以创建
+							if (GameManager.Money >= SelectedTurretData.cost) //可以创建
 							{
-								gameManager.ChangeMoney(-selectedTurretData.cost);
-								mapCube.BuildTurret(selectedTurretData);
+								_gameManager.ChangeMoney(-SelectedTurretData.cost);
+								_mapCube.BuildTurret(SelectedTurretData);
 							}
 							else
-								uiManager.ShowNoEnoughMoney();
+								_uiManager.ShowNoEnoughMoney();
 						}
-						else if (mapCube.turretGo != null) //显示升级UI
+						else if (_mapCube.turretGo != null) //显示升级UI
 						{
-							var temp = mapCube.GetComponent<MapCube>();
-							uiManager.ShowUpgradeMenu(mapCube.transform.position, temp.GetUpgradePrice(),
+							var temp = _mapCube.GetComponent<MapCube>();
+							_uiManager.ShowUpgradeMenu(_mapCube.transform.position, temp.GetUpgradePrice(),
 								temp.GetDeletePrice());
 						}
 					}
@@ -60,49 +65,41 @@ namespace Manager
 
 			if (Input.GetMouseButton(1)) //右键取消当前选择&升级
 			{
-				selectedTurretData = null;
-				uiManager.HideUpgradeMenu();
+				SelectedTurretData = null;
+				_uiManager.HideUpgradeMenu();
 			}
 		}
-		
+
 		public void OnAxSelected()
 		{
-			selectedTurretData = axData;
+			SelectedTurretData = _axDataPrefab;
 		}
 
 		public  void OnBowSelected()
 		{
-			selectedTurretData = bowData;
+			SelectedTurretData = _bowDataPrefab;
 		}
 
 		public void OnLeafGrassSelected()
 		{
-			selectedTurretData = leafData;
+			SelectedTurretData = _leafDataPrefab;
 		}
-		
-		// IEnumerator HideUpgradeUI()
-		// {
-		// 	// upgradeCanvasAnimator.SetTrigger(Hide);
-		// 	//upgradeCanvas.SetActive(false);
-		// 	yield return new WaitForSeconds(0.8f);
-		// 	upgradeCanvas.SetActive(false);
-		// }
 		
 		public void OnUpgradeButtonDown()
 		{
-			if (mapCube == null || mapCube.turretGo == null) return;
-			if (!mapCube.UpgradeTurret()) //不够钱
-				uiManager.ShowNoEnoughMoney();
-			uiManager.HideUpgradeMenu();
-			uiManager.FlushMoney();
+			if (_mapCube == null || _mapCube.turretGo == null) return;
+			if (!_mapCube.UpgradeTurret()) //不够钱
+				_uiManager.ShowNoEnoughMoney();
+			_uiManager.HideUpgradeMenu();
+			_uiManager.FlushMoney();
 		}
 		
 		public void OnDestroyButtonDown()
 		{
-			if (mapCube == null || mapCube.turretGo == null) return;
-			mapCube.DestroyTurret();
-			uiManager.HideUpgradeMenu();
-			uiManager.FlushMoney();
+			if (_mapCube == null || _mapCube.turretGo == null) return;
+			_mapCube.DestroyTurret();
+			_uiManager.HideUpgradeMenu();
+			_uiManager.FlushMoney();
 		}
 	}
 }

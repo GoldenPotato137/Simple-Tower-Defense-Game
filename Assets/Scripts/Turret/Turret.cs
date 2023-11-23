@@ -26,7 +26,7 @@ namespace Turret
 
         protected GameObject GetNearestEnemy()
         {
-            enemies ??= EnemyManager.enemies;
+            enemies ??= EnemyManager.Enemies;
             if (enemies == null || enemies.Count == 0) return null;
             GameObject ans = enemies[0];
             foreach (var enemy in enemies)
@@ -37,7 +37,7 @@ namespace Turret
         
         void  Update()
         {
-            enemies ??= EnemyManager.enemies;
+            enemies ??= EnemyManager.Enemies;
             if (isOn == false) return;
             if (faceEnemy && GetNearestEnemy()!=null && (GetNearestEnemy().transform.position-transform.position).magnitude <= fireRange)
             {

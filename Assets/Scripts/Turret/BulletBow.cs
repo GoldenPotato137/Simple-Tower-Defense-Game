@@ -29,7 +29,7 @@ namespace Turret
             }
 
             transform.position += heading * Time.deltaTime * speed;
-            foreach (var target in EnemyManager.enemies)
+            foreach (var target in EnemyManager.Enemies)
                 if((target.transform.position - transform.position).magnitude< distanceArriveTarget)
                 {
                     target.GetComponent<Enemy.Enemy>().Damaged(damage);
