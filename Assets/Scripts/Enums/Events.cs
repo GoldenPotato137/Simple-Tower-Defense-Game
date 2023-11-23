@@ -8,5 +8,8 @@
         
         UIResumePushed,
         UIPausePushed,
+        UISelectTurret,
+        UIUpgradePushed,
+        UISellPushed,
     }
 }

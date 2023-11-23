@@ -5,7 +5,8 @@ using UnityEngine;
 namespace Turret
 {
     [System.Serializable]
-    public class TurretData  {
+    public class TurretData
+    {
         public GameObject turretPrefab;
         public int cost;
         public GameObject turretUpgradedPrefab;
@@ -14,6 +15,7 @@ namespace Turret
         public int costUltimate;
         public TurretType type;
     }
+
     public enum TurretType
     {
         Ax,

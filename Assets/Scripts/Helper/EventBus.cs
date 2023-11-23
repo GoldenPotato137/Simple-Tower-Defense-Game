@@ -25,13 +25,13 @@ namespace Helper
                 EventHandlers[eventName] = handler;
         }
 
-        public static void Unregister<T>(Events eventName, Action<T> handler)
+        public static void UnRegister<T>(Events eventName, Action<T> handler)
         {
             if (EventHandlers.ContainsKey(eventName))
                 EventHandlers[eventName] = Delegate.Remove(EventHandlers[eventName], handler);
         }
         
-        public static void Unregister(Events eventName, Action handler)
+        public static void UnRegister(Events eventName, Action handler)
         {
             if (EventHandlers.ContainsKey(eventName))
                 EventHandlers[eventName] = Delegate.Remove(EventHandlers[eventName], handler);

@@ -1,5 +1,6 @@
 ﻿using Enums;
 using Helper;
+using Turret;
 using UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -114,5 +115,24 @@ namespace Manager
         {
             EventBus.Trigger(Events.LevelQuit);
         }
+
+        public void OnSelectAx()
+        {
+            EventBus.Trigger(Events.UISelectTurret, TurretType.Ax);
+        }
+        
+        public void OnSelectBow()
+        {
+            EventBus.Trigger(Events.UISelectTurret, TurretType.Bow);
+        }
+        
+        public void OnSelectLeafGrass()
+        {
+            EventBus.Trigger(Events.UISelectTurret, TurretType.LeafGrass);
+        }
+
+        public void OnUpdatedPushed() => EventBus.Trigger(Events.UIUpgradePushed);
+        
+        public void OnSellPushed() => EventBus.Trigger(Events.UISellPushed);
     }
 }

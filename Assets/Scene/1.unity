@@ -395,7 +395,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117670436}
-  - component: {fileID: 117670437}
   - component: {fileID: 117670438}
   m_Layer: 0
   m_Name: GameManager
@@ -419,53 +418,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &117670437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 117670434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc7ca5924387a5e438ae2c5ef507691b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axData:
-    turretPrefab: {fileID: 1000010212356012, guid: a25409d9afcbb104989f003843f291cd,
-      type: 3}
-    cost: 160
-    turretUpgradedPrefab: {fileID: 1000010212356012, guid: 40386d5268814ed49c998e9eecf63fbd,
-      type: 3}
-    costUpgraded: 220
-    turretUltimatePrefab: {fileID: 1000010212356012, guid: d0e473d934044513b17aa434c88485f8,
-      type: 3}
-    costUltimate: 260
-    type: 0
-  bowData:
-    turretPrefab: {fileID: 1000013451074636, guid: 1b4df2e8c8f6af64bbb1f67722c13339,
-      type: 3}
-    cost: 100
-    turretUpgradedPrefab: {fileID: 1000013451074636, guid: 5854e56d01d74ea690de36ceffde53c8,
-      type: 3}
-    costUpgraded: 180
-    turretUltimatePrefab: {fileID: 1000013451074636, guid: 57e18785601347be9f4d9c8b44cb1465,
-      type: 3}
-    costUltimate: 260
-    type: 0
-  leafData:
-    turretPrefab: {fileID: 1000012722099092, guid: ba1d0282fa14ce446b3a92a2dfc9e59f,
-      type: 3}
-    cost: 120
-    turretUpgradedPrefab: {fileID: 1000012722099092, guid: 10e3d4e699af498fa4c0d5729557d817,
-      type: 3}
-    costUpgraded: 220
-    turretUltimatePrefab: {fileID: 1000012722099092, guid: a1b21dc1cf6845e989bc628311d27dc2,
-      type: 3}
-    costUltimate: 260
-    type: 0
-  uiManager: {fileID: 117670438}
-  gameManager: {fileID: 0}
 --- !u!114 &117670438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3268,9 +3220,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117670437}
-        m_TargetAssemblyTypeName: Manager.BuildManager, Assembly-CSharp
-        m_MethodName: OnDestroyButtonDown
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
+        m_MethodName: OnSellPushed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3406,8 +3358,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Manager.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
         m_MethodName: OnButtonMenu
         m_Mode: 1
         m_Arguments:
@@ -3538,9 +3490,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117670437}
-        m_TargetAssemblyTypeName: Manager.BuildManager, Assembly-CSharp
-        m_MethodName: OnAxSelected
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
+        m_MethodName: OnSelectAx
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4838,9 +4790,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117670437}
-        m_TargetAssemblyTypeName: Manager.BuildManager, Assembly-CSharp
-        m_MethodName: OnLeafGrassSelected
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
+        m_MethodName: OnSelectLeafGrass
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6206,8 +6158,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Manager.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
         m_MethodName: OnButtonRetry
         m_Mode: 1
         m_Arguments:
@@ -6356,9 +6308,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117670437}
-        m_TargetAssemblyTypeName: Manager.BuildManager, Assembly-CSharp
-        m_MethodName: OnUpgradeButtonDown
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
+        m_MethodName: OnUpdatedPushed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6754,8 +6706,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Manager.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
         m_MethodName: OnButtonRetry
         m_Mode: 1
         m_Arguments:
@@ -6954,8 +6906,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Manager.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
         m_MethodName: OnButtonMenu
         m_Mode: 1
         m_Arguments:
@@ -7803,9 +7755,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 117670437}
-        m_TargetAssemblyTypeName: Manager.BuildManager, Assembly-CSharp
-        m_MethodName: OnBowSelected
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
+        m_MethodName: OnSelectBow
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7935,8 +7887,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Manager.GameManager, Assembly-CSharp
+      - m_Target: {fileID: 117670438}
+        m_TargetAssemblyTypeName: Manager.UiManager, Assembly-CSharp
         m_MethodName: OnButtonRetry
         m_Mode: 1
         m_Arguments:
